@@ -40,8 +40,7 @@ class NaviButtonView extends NavigationView {
                 
                 Planet planet = planetItem.getBean();
                 group.addComponent(new Image(null, new ThemeResource(
-                    "../book-examples/img/planets/" +
-                    planet.getName() + ".jpg")));
+                    "img/planets/" + planet.getName() + ".jpg")));
                 group.addComponent(new TextField("Name",
                     planetItem.getItemProperty("name")));
                 group.addComponent(new TextField("Orbit",
@@ -62,7 +61,7 @@ class NaviButtonView extends NavigationView {
                     new NavigationButton(planet.getName());
             planetNav.setTargetViewCaption(planet.getName());
             planetNav.setIcon(new ThemeResource(
-                "../book-examples/img/planets/" + planet.getName() + "_symbol.png"));
+                "img/planets/" + planet.getName() + "_symbol.png"));
             if (planet.getMoons() > 0) {
                 planetNav.setDescription(planet.getMoons() + " moons");
                 if (planet.getMoons() == 1)

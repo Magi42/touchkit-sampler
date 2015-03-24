@@ -39,7 +39,7 @@ import com.vaadin.ui.UI;
 @OfflineModeEnabled
 
 // Make the server retain UI state whenever the browser reloads the app
-@PreserveOnRefresh
+// @PreserveOnRefresh
 public class TouchKitSamplerUI extends UI {
 
     // TODO This is currently unused in the sampler

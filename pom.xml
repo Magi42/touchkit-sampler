@@ -5,13 +5,13 @@
     <groupId>com.vaadin</groupId>
     <artifactId>touchkit-sampler</artifactId>
     <packaging>war</packaging>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <name>TouchKitSampler - Vaadin TouchKit Web Application</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <vaadin.version>[7.3.1,7.3.9999]</vaadin.version>
-        <vaadin.version.maven>7.3.1</vaadin.version.maven>
+        <vaadin.version>[7.3.1,7.4.9999]</vaadin.version>
+        <vaadin.version.maven>7.4.2</vaadin.version.maven>
         <touchkit.version>4.0.0</touchkit.version>
     </properties>
     <repositories>
@@ -69,13 +69,13 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <!-- Desktop fallback uses reindeer theme -->
+            <!-- Desktop fall-back uses valo theme -->
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-themes</artifactId>
             <version>${vaadin.version}</version>
         </dependency>
         <dependency>
-            <!-- Desktop fallback uses default widgetset -->
+            <!-- Desktop fall-back uses default widget set -->
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-client-compiled</artifactId>
             <version>${vaadin.version}</version>
@@ -141,7 +141,7 @@
                 </executions>
             </plugin>
 
-            <!-- As we are doing "inplace" GWT compilatio, ensure the widgetset -->
+            <!-- As we are doing "in-place" GWT compilation, ensure the widget set -->
             <!-- directory is cleaned properly -->
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
@@ -177,14 +177,12 @@
                                         <artifactId>
                                             vaadin-maven-plugin
                                         </artifactId>
-                                        <versionRange>
-                                            [7.0-SNAPSHOT,)
-                                        </versionRange>
+                                        <versionRange>[7.1.11,)</versionRange>
                                         <goals>
-                                            <goal>
-                                                update-widgetset
-                                            </goal>
                                             <goal>resources</goal>
+                                            <goal>update-widgetset</goal>
+                                            <goal>compile</goal>
+                                            <goal>compile-theme</goal>
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>

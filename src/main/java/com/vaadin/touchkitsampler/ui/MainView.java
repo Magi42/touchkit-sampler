@@ -57,6 +57,8 @@ public class MainView extends NavigationView {
             group.addComponent(fieldViewButton);
             
             group.addComponent(new NavigationButton(new HBGView()));
+
+            group.addComponent(new NavigationButton(new MyNavigationView(this)));
     
             content.addComponent(group);
         }
